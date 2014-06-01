@@ -1,0 +1,6 @@
+rootProject.name = 'gradle-demo'
+
+include 'project_structure_plugin'
+
+include 'gradlemodule1'
+

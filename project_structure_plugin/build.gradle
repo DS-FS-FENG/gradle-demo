@@ -1,0 +1,22 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.5
+version = '1.0'
+group = 'mahosyojyo'
+archivesBasename = 'projectstructureplugin'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: 'file:../lib')
+    }
+}
