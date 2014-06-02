@@ -1,22 +1,36 @@
 apply plugin: 'groovy'
+
+/* TODO
+* 添加maven plugin（大概是上传用）
+* */
 apply plugin: 'maven'
 
 sourceCompatibility = 1.5
 version = '1.0'
+
+/* TODO
+* 设置group和archivesBaseName属性
+* */
 group = 'mahosyojyo'
-archivesBasename = 'projectstructureplugin'
+archivesBaseName = 'project_structure_plugin'
 
 repositories {
     mavenCentral()
 }
 
+/* TODO
+* 添加gradle 和 groovy dependencies
+* */
 dependencies {
     compile gradleApi()
     compile localGroovy()
 }
 
+/* TODO
+* 上传你的plugin至本地Maven repositories
+* */
 uploadArchives {
     repositories.mavenDeployer {
-        repository(url: 'file:../lib')
+        repository(url: 'file:../../lib')
     }
 }
