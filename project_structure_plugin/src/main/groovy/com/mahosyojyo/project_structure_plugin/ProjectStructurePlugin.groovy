@@ -6,6 +6,12 @@ import org.gradle.api.Project
 /**
  * Created by FredFung on 2014/6/1.
  */
+
+/**
+ *  TODO
+ *  自定义plugin
+ *  实现apply时的动作
+ *  */
 class ProjectStructurePlugin implements Plugin<Project> {
 
     def javaPath = '/src/main/java/com/mahosyojyo/'
@@ -16,7 +22,7 @@ class ProjectStructurePlugin implements Plugin<Project> {
             javaPath + 'dao',
             javaPath + 'service',
             javaPath + 'controller',
-            resourcePath + 'META_INF',
+            resourcePath + 'META-INF',
             resourcePath + 'spring',
             resourcePath + 'properties'
     ] as String[]
@@ -29,8 +35,11 @@ class ProjectStructurePlugin implements Plugin<Project> {
     }
 
     private void addTask(Project project) {
+        //通过自定义task添加task
         project.getTasks().create("createSrc", CreateSourceDirsTask.class);
 
+
+        //直接添加task
         project.getTasks().create("createSpringStructure") << {
             String projectDir = project.projectDir.getPath();
 
