@@ -9,6 +9,11 @@ import org.gradle.api.tasks.TaskAction
  * Description:
  * Create Directory: /src/main/java  /src/main/resources  /src/test/java  /src/test/resources
  */
+
+/**
+ * TODO
+ * 自定义task
+ * */
 class CreateSourceDirsTask extends DefaultTask {
     def mainPath = "/src/main"
     def testPath = "/src/test"

@@ -17,3 +17,7 @@ Build java project with Gradle and Intellj IDEA
 ### 添加Plugin方法：
 总之好烦，等我组织好语言再写，可以参照gradlemodule1中的build.gradle文件
 
+============
+
+*2014-6-2*  
+添加TODO，标记处自定义Plugin所需要的工作

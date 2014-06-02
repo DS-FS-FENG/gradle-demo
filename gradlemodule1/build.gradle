@@ -17,7 +17,7 @@ dependencies {
 buildscript {
     repositories {
         maven {
-            url 'file:../lib'
+            url 'file:../../lib'
         }
     }
     dependencies{
